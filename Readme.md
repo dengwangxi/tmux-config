@@ -76,3 +76,9 @@ $ tmux set mouse on # 通过鼠标滚动屏幕，切换窗口
 ```
 
 ![Mouse Mode](https://raw.githubusercontent.com/shfshanyue/tmux-config/assets/mouse-origin.gif)
+
+### msys2:
+# For vi copy mode bindings
+bind -Tcopy-mode-vi MouseDragEnd1Pane send -X copy-pipe "cat > /dev/clipboard" \; send -X clear-selection
+# For emacs copy mode bindings
+bind -Tcopy-mode MouseDragEnd1Pane send -X copy-pipe "cat > /dev/clipboard" \; send -X clear-selection
